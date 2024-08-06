@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/ico.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Trece Noticias | Noticias de hoy en Costa Rica y el mundo</title>
+    <link rel="stylesheet" href="styles.css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0
+    .0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min
+    .js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/p
+    opper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.
+    min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_es.min.js"
+        integrity="sha512-v0vjOquuhHQslRkq1a5BwUIyKSD7ZbgFfQv4jzSBGwbIVTCOs5JQdotZVoRjPRzb9UToTvuP2kdR5CVE4TLgMw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!--    <script>
+        var formattedNumber = new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    </script>
+    <script>
+        var formattedNumber = new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    </script> -->
+
+    <!-- <div id="overlay">
+        <div class="flexblink">
+            <div class="blinkfake">
+                <div class="carousel slide pointer-event" id="carouselExampleAutoplaying" data-bs-ride="carousel">
+                    <div class="carousel-item active">
+                        <div class="infoblink">
+                            <div class="hand">
+                                <img class="handin" src="img/ok.png" alt="" srcset="">
+                            </div>
+                            <div class="texthand">
+                                <h1>¡Registro completado!</h1>
+                                <p>Recibirás una llamada nuestra en tu número en 30 minutos.</p>
+                                <p>
+                                    <b>Por favor, sigue estos pasos:</b>
+                                </p>
+                                <ol>
+                                    <li>Activa el volumen de tu timbre.</li>
+                                    <li>Mantén tu teléfono al alcance.</li>
+                                    <li>Contesta la llamada.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="infoblink">
+                            <div class="hand">
+                                <img class="handin" src="img/hand.png" alt="" srcset="">
+                                <img class="starblink" src="img/star.png" alt="">
+                                <img class="starblink2" src="img/star.png" alt="">
+                                <img class="starblink3" src="img/star.png" alt="" srcset="">
+                            </div>
+                            <div class="texthand">
+                                <h1>Hola <span id="nameprint"></span>!</h1>
+                                <h4>¡Hemos recibido Tus datos! </h4>
+                                <p>Recuerda que un asesor se comunicara en la brevedad, por favor estate atento a
+                                    cualquier llamada.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="infoblink">
+                            <div class="hand">
+                                <img class="coin" src="img/coin.png" alt="" srcset="">
+                                <img class="starblink4" src="img/star.png" alt="" srcset="">
+                                <img class="starblink5" src="img/star.png" alt="" srcset="">
+                            </div>
+                            <div class="texthand">
+                                <h1>Recuerda que la inversión mínima es de ₡135&nbsp;000
+                                </h1>
+                                <p>El dinero que inviertas siempre será tuyo. Por lo que podrás retirarlo siempre que
+                                    así lo desees</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="infoblink">
+                            <div class="hand">
+                                <img src="img/allmoney.png" alt="" srcset="">
+                                <img class="starblink5" src="img/star.png" alt="" srcset="">
+                                <img class="starblink4" src="img/star.png" alt="" srcset="">
+                            </div>
+                            <div class="texthand">
+                                <h1>Gana hasta ₡20&nbsp;250&nbsp;000 por mes </h1>
+                                <h4>Sin conocimientos previos </h4>
+                                <p>Generar ₡20&nbsp;250&nbsp;000 no es solo para ricos. Oil Profit lo ha hecho posible
+                                    para todas las personas en Costa Rica</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="infoblink">
+                            <div class="hand">
+                                <img class="handin" src="img/call.png" alt="" srcset="">
+                            </div>
+                            <div class="texthand">
+                                <h1>En breve un asesor te marcara al <span id="printphone">tu telefono</span></h1>
+                                <p>Recuerda que un asesor te marcara en cualquier momento al número proporcionado <span
+                                        id="printphone2">tu telefono</span>. Porfavor estate al pendiente de cualquier
+                                    llamada.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="infoblink">
+                            <div class="hand">
+                                <img class="coin" src="img/word.png" alt="" srcset="">
+                                <img class="starblink4" src="img/star.png" alt="" srcset="">
+                                <img class="starblink5" src="img/star.png" alt="" srcset="">
+                            </div>
+                            <div class="texthand">
+                                <h1>Complementa tu inversión</h1>
+                                <p>Arma tu portafolio de inversión con productos innovadores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="botommsdi">
+                        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+  <!--   <div class="barmodal" id="barmodal">
+        <div class="d-flex justify-content-end px-lg-4 px-0">
+            <div class="close-bottom" onclick="closebtn()">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center g-y-2">
+                <div class="col-lg-9 col-12 gap-2">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p>Regístrate en Oil Profit y recibe 20% en bonificación sobre tu primera inversión.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-12 mt-lg-0 mt-md-0 mt-2">
+                    <a class="btn" href="#registro" type="button">Regístrate Ahora </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <nav>
+        <!--Encabezado principal-->
+        <ul class="nav justify-content-center ">
+            <li class="nav-item header">
+                <a class="nav-link text-muted" aria-current="page" href="#registro">Inicio</a>
+            </li>
+            <li class="nav-item header">
+                <a class="nav-link text-muted" aria-current="page" href="#registro">Canal Trece</a>
+            </li>
+            <li class="nav-item header">
+                <a class="nav-link text-muted" aria-current="page" href="#registro">Trece Noticias</a>
+            </li>
+            <li class="nav-item header">
+                <a class="nav-link text-muted" aria-current="page" href="#registro">La Nacional 101.5 FM</a>
+            </li>
+            <li class="nav-item header">
+                <a class="nav-link text-muted" aria-current="page" href="#registro">Deportivas del trece</a>
+            </li>
+            <li class="nav-item header">
+                <a class="nav-link text-muted" aria-current="page" href="#registro">Transparencia</a>
+            </li>
+        </ul>
+
+        <!--sub-encabezado-->
+        <div class="sticky-top top browser">
+            <div class="trecenav bg-white">
+                <a href="#registro"> @trecenoticiascr</a>
+                <a href="#registro"> <img src="img/logo.png" alt="" srcset=""></a>
+                <a href="#registro">De Lunes a Domingo <br> 6:30am - 12md - 6pm</a>
+            </div>
+            <div class="subnav">
+                <a href="#registro">Nacionales</a>
+                <a href="#registro">Mundo</a>
+                <a href="#registro">Tecnología</a>
+                <a href="#registro">Economía</a>
+                <a href="#registro">Entretenimiento</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-12 contenidooil">
+                <a href="#registro">
+                    <h1> ¿Cómo Natalia Díaz Quintana ganó ₡8&nbsp;100&nbsp;000 en seis días con Oil Profit
+                        ¿Por qué tuvo que detener la transmisión? ¡Detalles impactantes del éxito!</h1>
+                </a>
+                <a href="#registro">
+                    <div class="text-center">
+                        <img class="img-fluid" src="img/fuentes.jpg" alt="">
+                    </div>
+                </a>
+                <div class="text-center">
+                    <a href="#registro">
+                        <div class="text-center">
+                            <img class="img-fluid" src="img/thumb.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <p class="mt-3">Hoy quiero compartir contigo la emocionante experiencia de mi inversión en
+                    <a href="#registro"> Oil Profit</a>, un startup que revolucionó mis percepciones sobre lo posible
+                    en el mundo de la tecnología e <a href="#registro"> inteligencia artificial</a>.
+                </p>
+                <p>
+                    Cuando el equipo de <a href="#registro"> Oil Profit</a> me contacto el otoño pasado, capturaron mi
+                    atención de inmediato. Su proyecto ambicioso, centrado en avanzar en la computación cuántica, me
+                    inspiró. Siempre he valorado las <a href="#registro"> innovaciones</a> y las tecnologías futuras, y
+                    <a href="#registro"> Oil Profit</a> presentó algo extraordinario: el potencial uso de la computación
+                    cuántica en aplicaciones del <a href="#registro"> mundo real</a>, desde la optimización de procesos
+                    empresariales hasta
+                    <a href="#registro"> la investigación médica.</a>
+                </p>
+                <p>
+                    Reconociendo el potencial de este proyecto, tomé la decisión de invertir en <a href="#registro"> Oil
+                        Profit</a>. Nuestra colaboración comenzó justo después de nuestro encuentro, y nos sumergimos en
+                    la realización de <a href="#registro"> sus ideas ambiciosas</a>.
+                    Invertí no solo mi dinero, sino también mi experiencia empresarial. Juntos, formulamos una
+                    estrategia de marketing sólida y un plan de promoción del producto, y asistí al equipo de <a
+                        href="#registro"> Oil Profit</a>
+                    en la creación de un modelo de negocio eficiente que tuviera éxito a largo plazo.
+                </p>
+                <p>Los primeros meses estuvieron llenos de trabajo arduo y emoción. <a href="#registro"> Oil Profit</a>
+                    desarrolló activamente <a href="#registro"> sus tecnologías</a>, perfeccionándolas para aplicaciones
+                    industriales. Nuestro equipo pasó incontables horas explorando <a href="#registro"> nuevas
+                        posibilidades</a>
+                    e ideando soluciones innovadoras. Cada día nos acercaba al momento en que nuestro <a
+                        href="#registro"> producto</a> estuviera listo para el lanzamiento al mercado. </p>
+                <p>Sin embargo, debido al rápido crecimiento y la emoción asociada con este éxito, tuvimos que cancelar
+                    el anuncio de esta plataforma y eliminar toda la <a href="#registro"> información</a> al respecto de
+                    Internet para manejar la abrumadora atención e <a href="#registro"> investigaciones</a>. El
+                    increíble interés público y la atención mediática subrayaron la importancia de nuestro trabajo y
+                    demostraron cómo
+                    <a href="#registro"> las tecnologías de Oil Profit</a> podrían cambiar el mundo.
+                </p>
+                <img class="img-fluid my-4" src="img/entre.jpg" alt="" srcset="">
+                <p>
+                    Por supuesto, estos desafíos no nos detuvieron. Finalmente, se abrió el acceso a inversiones, lo que
+                    permitió que <a href="#registro"> Oil Profit</a>
+                    desplegara todo su potencial. Después de seis meses de esfuerzos diligentes,
+                    lanzamos con éxito <a href="#registro"> Oil Profit</a>.
+                    Sus cálculos cuánticos se volvieron indispensables en diversas industrias.
+                    Se utilizaron <a href="#registro"> en investigaciones</a> médicas para analizar vastas
+                    cantidades de datos, en el sector financiero para optimizar estrategias
+                    de inversión e incluso en el campo de <a href="#registro"> la inteligencia artificial</a>
+                    para entrenar aprendizaje automático basado en algoritmos cuánticos.
+                </p>
+                <p>En tan solo seis meses desde mi inversión, <a href="#registro"> Oil Profit</a> alcanzó alturas
+                    asombrosas. El valor de mi inversión se multiplicó varias veces, y obtuve impresionantes <a
+                        href="#registro"> ₡8&nbsp;100&nbsp;000</a>. pero sinceramente, para mí, se trataba de algo más
+                    que dinero. Encontré una mayor satisfacción al presenciar cómo nuestro proyecto estaba cambiando el
+                    mundo que nos rodea. </p>
+                <p>
+                    <a href="#registro"> Oil Profit</a> hizo que la computación cuántica fuera accesible y útil para un
+                    amplio público. Creamos <a href="#registro"> tecnologías</a> que ayudan a resolver problemas
+                    complejos de manera más rápida y eficiente. Contribuimos a la ciencia, la medicina y
+                    <a href="#registro"> el progreso tecnológico</a>. Sin embargo, esto fue solo el comienzo.
+                    Continuamos explorando, creciendo y evolucionando, desbloqueando nuevas posibilidades para el
+                    futuro.
+                </p>
+                <p>
+                    <a href="#registro"> Esta historia no es solo el relato exitoso de un inversionista y una
+                        startup.</a> Es una historia sobre cómo la creencia en <a href="#registro"> la innovación</a>,
+                    el esfuerzo persistente y los esfuerzos colaborativos pueden cambiar el mundo.
+                </p>
+                <p>
+                    Anuncio oficialmente que estoy abriendo el acceso a <a href="#registro"> la plataforma</a>, pero los
+                    lugares serán limitados. Las primeras 100 personas afortunadas que hayan enviado su solicitud
+                    después de ver el anuncio en Facebook podrán invertir.
+                    Es muy sencillo; si tienes la suerte de convertirte en participante, espera una llamada de uno de
+                    nuestros gerentes y te ayudarán a comenzar lo antes posible.
+                    Ten en cuenta que la inversión mínima es de
+                    <a href="#registro"> ₡135&nbsp;000</a>.
+                </p>
+                <a href="#registro">
+                    <div class="text-center"><img class="img-fluid" src="img/juanr2.jpg" alt=""></div>
+                </a>
+                <a href="#registro">
+                    <div class="blockdata">Natalia Díaz Quintana anuncia en vivo a Oil Profit</div>
+                </a>
+                <p class="mt-4">
+                    <strong>Ganancias de los usuarios del día anterior en <a href="#registro"> Oil
+                            Profit</a>
+                    </strong>
+                </p>
+                <p>Los datos se actualizan en tiempo real, cada 5 segundos desde la plataforma oficial de Oil Profit.
+                </p>
+                <div class="supertyablae my-3">
+                    <div class="item-tablae" style="order: 0;">
+                        <div class="name">
+                            <span class="circle"> </span>
+                            <b>Nombre</b>
+                        </div>
+                        <div class="win">
+                            <b>Ganancia</b>
+                        </div>
+                        <div class="city">
+                            <b>Ciudad</b>
+                        </div>
+                    </div>
+                    <div class="item-tablae">
+                        <div class="name">
+                            <span class="circle">
+                            </span>
+                            <b id="namedata-1">Josefa</b>
+                        </div>
+                        <div class="win">
+                            <b id="windata-1">₡672&nbsp;415</b>
+                        </div>
+                        <div class="city">
+                            <b id="citydata-1">Puntarenas</b>
+                        </div>
+                    </div>
+                    <div class="item-tablae">
+                        <div class="name">
+                            <span class="circle"> </span>
+                            <b id="namedata-2">Miguel</b>
+                        </div>
+                        <div class="win">
+                            <b id="windata-2">₡418&nbsp;977</b>
+                        </div>
+                        <div class="city">
+                            <b id="citydata-2">Guanacaste</b>
+                        </div>
+                    </div>
+                    <div class="item-tablae">
+                        <div class="name">
+                            <span class="circle"> </span>
+                            <b id="namedata-3">Karla</b>
+                        </div>
+                        <div class="win">
+                            <b id="windata-3">₡799&nbsp;606</b>
+                        </div>
+                        <div class="city">
+                            <b id="citydata-3">Alajuela</b>
+                        </div>
+                    </div>
+                    <div class="item-tablae">
+                        <div class="name">
+                            <span class="circle"> </span>
+                            <b id="namedata-4">Sergio</b>
+                        </div>
+                        <div class="win">
+                            <b id="windata-4">₡511&nbsp;126</b>
+                        </div>
+                        <div class="city">
+                            <b id="citydata-4">Puntarenas</b>
+                        </div>
+                    </div>
+                    <div class="item-tablae">
+                        <div class="name">
+                            <span class="circle"> </span>
+                            <b id="namedata-5">Victor</b>
+                        </div>
+                        <div class="win">
+                            <b id="windata-5">₡1&nbsp;057&nbsp;150</b>
+                        </div>
+                        <div class="city">
+                            <b id="citydata-5">Guanacaste</b>
+                        </div>
+                    </div>
+                    <div class="item-tablae">
+                        <div class="name">
+                            <span class="circle"> </span>
+                            <b id="namedata-6">Alejandro</b>
+                        </div>
+                        <div class="win">
+                            <b id="windata-6">₡1&nbsp;149&nbsp;685</b>
+                        </div>
+                        <div class="city">
+                            <b id="citydata-6">Puntarenas</b>
+                        </div>
+                    </div>
+                    <div class="item-tablae">
+                        <div class="name"> <span class="circle"> </span><b id="namedata-7">Silvia</b></div>
+                        <div class="win"><b id="windata-7">₡154&nbsp;661</b></div>
+                        <div class="city"><b id="citydata-7">Guanacaste</b></div>
+                    </div>
+                    <div class="item-tablae">
+                        <div class="name"> <span class="circle"> </span><b id="namedata-8">Katherine</b></div>
+                        <div class="win"><b id="windata-8">₡1&nbsp;037&nbsp;817</b></div>
+                        <div class="city"><b id="citydata-8">Guanacaste</b></div>
+                    </div>
+                    <div class="item-tablae">
+                        <div class="name"> <span class="circle"> </span><b id="namedata-9">Antonio</b></div>
+                        <div class="win"><b id="windata-9">₡273&nbsp;979</b></div>
+                        <div class="city"><b id="citydata-9">Guanacaste</b></div>
+                    </div>
+                    <div class="item-tablae">
+                        <div class="name"> <span class="circle"> </span><b id="namedata-10">Ricardo</b></div>
+                        <div class="win"><b id="windata-10">₡541&nbsp;409</b></div>
+                        <div class="city"><b id="citydata-10">Limón</b></div>
+                    </div>
+                    <!--   <script type="text/javascript">const allnamesincountr = JSON.parse(`["María","Josefa","Ana","Carmen","Rosa","Laura","Marta","Flor","Andrea","Adriana","Olga","Karla","Elizabeth","Karen","Silvia","Sandra","Sonia","Katherine","Luz","Adriana","José","Luis","Carlos","Juan","David","Daniel","Mario","Francisco","Jorge","Manuel","Miguel","Eduardo","Alejandro","Fernando","Rafael","Antonio","Sergio","Ricardo","Roberto","Victor","Manuel","Miguel","Eduardo","Alejandro"]`);
+                        const citiesincountr = JSON.parse(`["San José","Alajuela","Cartago","Heredia","Guanacaste","Puntarenas","Limón","San Carlos","Puntarenas","Guanacaste","Limón","San Carlos","Puntarenas","Guanacaste","Limón"]`);
+                        const datamoney = 135000
+                        const randomNumbers = [];
+                        setInterval(() => {
+                            for (let i = 1; i <= 10; i++) {
+                                const name = document.querySelector('#namedata-' + i);
+                                const moneydata = document.querySelector('#windata-' + i);
+                                const citidata = document.querySelector('#citydata-' + i);
+
+                                const randomNumber = Math.floor(Math.random() * 40)
+                                const randomcityNumber = Math.floor(Math.random() * 14)
+                                const moneyRandom = Math.random() * (datamoney * 10 - datamoney) + datamoney;
+
+
+                                name.innerHTML = allnamesincountr[randomNumber]
+                                citidata.innerHTML = citiesincountr[randomcityNumber]
+                                moneydata.innerHTML = moneyRandom.toLocaleString('es-CR', { style: 'currency', currency: 'CRC', maximumFractionDigits: 0 });
+                            }
+                        }, 5000);
+                    </script> -->
+                </div>
+                <p><strong>ACTUALIZACIÓN</strong></p>
+                <p>Acabamos de recibir noticias que, a partir de hoy <b id="hastyear">6 de agosto del 2024</b>, Casi
+                    todas las posiciones están ocupadas <a href="#registro"> Oil Profit</a> solo puede aceptar un número
+                    limitado de usuarios totales para mantener altas las ganancias por usuario. En este momento,
+                    aún quedan (37) lugares disponibles, así que apúrate y regístrate ahora para asegurar tu lugar. </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario de Registro -->
+    <section id="registration-form">
+        <h2>Formulario de Registro</h2>
+        <form id="signup-form">
+            <label for="firstName">Nombre:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Apellido:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Popup de Ganancia -->
+    <div id="gain-popup" class="popup hidden">
+        <div class="popup-content">
+            <span id="gain-close" class="close">&times;</span>
+            <h2>Ganancias</h2>
+            <p id="gain-details">Aquí van los detalles de las ganancias.</p>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="modal-form" class="modal hidden">
+        <div class="modal-content">
+            <span id="modal-close" class="close">&times;</span>
+            <h2>Registro</h2>
+            <!-- Contenido del modal de registro -->
+        </div>
+    </div>
+
+    <!-- Modal de Información de Ganancias -->
+    <div id="info-popup" class="popup hidden">
+        <div class="popup-content">
+            <span id="info-close" class="close">&times;</span>
+            <h2>Información de Ganancias</h2>
+            <p id="info-details">Aquí va la información sobre cuánto se depositó y cuánto se ganó.</p>
+        </div>
+    </div>
+
+    <!--modal de registro-->
+    <div class="barmodal" id="barmodal">
+        <div class="d-flex justify-content-end px-lg-4 px-0">
+            <div class="close-bottom" onclick="closebtn()"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center g-y-2">
+                <div class="col-lg-9 col-12 gap-2">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p>Regístrate en Oil Profit y recibe 20% en bonificación sobre tu primera inversión.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-12 mt-lg-0 mt-md-0 mt-2"><a class="btn" href="#registro"
+                        type="button">Regístrate Ahora </a></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+    <script src="validation.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>
