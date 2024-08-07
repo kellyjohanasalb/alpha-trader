@@ -14,6 +14,7 @@ body {
 
 }
 
+
 /* modal registrate ahora */
 .barmodal {
     position: fixed;
@@ -44,7 +45,15 @@ p {
 .barmodal .btn {
     background-color: #ed1c24;
     color: #fff;
+    padding: 4px 24px;
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-align: center; 
+    display: inline-block; 
 }
+
 .px-0 {
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -74,7 +83,17 @@ p {
     justify-content: center !important;
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000; /* Asegúrate de que el navbar esté por encima de otros elementos */
+}
+
 .nav {
+    background-color: white;
+    padding: 10px 0;
     --bs-nav-link-padding-x: 1rem;
     --bs-nav-link-padding-y: 0.5rem;
     --bs-nav-link-font-weight: ;
@@ -272,6 +291,15 @@ p {
     padding: 0 !important;
 }
 
+.modalwhitw .intgrtn-btn-submit {
+    background-color: #ed1c24 !important;
+    margin-top: 10px; /* Ajusta el valor según tus necesidades para bajar el botón */
+    box-shadow: 
+        0 4px 8px rgba(237, 28, 36, 0.6), /* Sombra más pronunciada */
+        0 0 15px rgba(237, 28, 36, 0.4), /* Efecto de onda más difuso */
+        0 0 25px rgba(237, 28, 36, 0.2); /* Sombra extendida para un efecto más amplio */
+}
+
 .headformmedio {
     background-color: red;
     color: #fff;
@@ -314,6 +342,57 @@ div{
     unicode-bidi: isolate;
 }
 
+
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formwrap {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .intgrtn-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .intgrtn-btn-submit {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .intgrtn-btn-submit:hover {
+    background-color: darkred;
+  }
+  
+
+  .intgrtn-input-message-error {
+    display: none;
+    color: red;
+    margin-top: 5px;
+  }
+  
+
+  .intgrtn-input-message-error {
+    display: none; /* Asegúrate de que esta regla esté aplicada */
+}
+
+  
+
 .formwrap-outer .intgrtn-form-signup {
     box-sizing: border-box;
 }
@@ -330,80 +409,156 @@ input, button, select, optgroup, textarea {
     font-size: inherit;
     line-height: inherit;
 }
+.iti__dropdown-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .iti__dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .iti__hide {
+    display: none;
+  }
+  
+  .iti__search-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+  }
+  
+  .iti__country {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .iti__country:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .iti__flag-box {
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  .iti__country-name {
+    font-weight: bold;
+  }
+  
+  .iti__dial-code {
+    color: #666;
+    margin-left: 8px;
+  }
+  
 
-.mensaje-alerta {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f44336;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    z-index: 1000;
-}
+
 
 /* comments */
 
-section{
+
+section {
     display: block;
     unicode-bidi: isolate;
+    padding: 0 1rem; /* Opcional: Añade padding horizontal */
 }
 
-.mb-5{
+/* Margen inferior para los comentarios */
+.mb-5 {
     margin-bottom: 3rem !important;
 }
 
-.comment{
+/* Estilo general para cada comentario */
+.comment {
     margin-top: 2rem;
     box-sizing: border-box;
+    max-width: 600px; /* Limita el ancho máximo del comentario */
+    margin: 0 auto; /* Centra el comentario horizontalmente */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 8px; /* Redondea las esquinas del comentario */
+    background-color: #fff; /* Fondo blanco para el comentario */
+    overflow-wrap: break-word; /* Ajusta el contenido largo */
+    word-wrap: break-word; /* Ajusta el contenido largo */
 }
 
+/* Línea de título del comentario */
 .comment-line {
     font-size: 20px;
     color: #000;
     font-weight: 700;
     margin-bottom: 2rem;
-    margin-left: 1rem;
+    margin-left: 0; /* Elimina el margen izquierdo para alinear el texto */
     font-family: var(--guardian-medium);
+    text-align: center; /* Centra el texto dentro del comentario */
 }
 
+/* Contenido del comentario */
 .comment-content {
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
+    flex-direction: column; /* Los elementos hijos se apilan verticalmente */
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    justify-content: center; /* Centra los elementos hijos verticalmente */
+    max-width: 100%; /* Ajusta el ancho máximo al 100% del contenedor */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: none; /* Elimina la sombra */
+    overflow-wrap: break-word; /* Ajusta el contenido largo */
+    word-wrap: break-word; /* Ajusta el contenido largo */
 }
 
+/* Bloque de información del comentario */
 .comment-block {
-    margin: 1rem 1rem;
+    margin: 1rem 0; /* Ajusta el margen para centrar el bloque */
     display: flex;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
+    justify-content: center; /* Centra el bloque de información */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Asegura que el bloque ocupe el ancho completo del comentario */
 }
 
+/* Estilo para los enlaces dentro del bloque de información */
 .block-info-line__like_item a {
     color: #3b5998;
+    text-decoration: none; /* Elimina el subrayado */
 }
 
+/* Estilo para la fecha dentro del bloque de información */
 .block-info-line__date {
     font-weight: 700;
+    text-align: center; /* Centra el texto dentro del bloque de información */
 }
 
+/* Estilo para la sección de "likes" */
 .block-info-line__like {
     display: flex;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra verticalmente */
     color: #00acee;
 }
 
+/* Estilo para el nombre en la sección de comentarios */
 .block-info-comment__name {
     font-weight: 700;
     color: #3b5998;
+    text-align: center; /* Centra el texto dentro del comentario */
 }
+
+/* Alineación de íconos dentro del comentario */
+.comment-content i, .comment-content .fa {
+    vertical-align: middle; /* Alinea los íconos verticalmente con el texto */
+    margin-right: 5px; /* Espaciado a la derecha del ícono */
+}
+
+
+
 /* modal notifications */
-.alertify-notifier.ajs-right {
+ .alertify-notifier.ajs-right {
     right: 10px;
 }
 
@@ -435,6 +590,19 @@ section{
     height: 50px;
     margin-right: 10px;
 }
+.rostro {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px; /* Espacio entre el rostro y el icono */
+}
+
+.icono {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
 
 .textface {
     flex: 1;
@@ -446,4 +614,140 @@ section{
 
 .pwin {
     margin: 0;
+} 
+
+.alertify-notifier {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    color: #333; /* Color de texto oscuro para contraste */
+    padding: 10px; /* Espacio interno reducido */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    z-index: 2000; /* Asegúrate de que sea superior al menú de navegación */
+    max-width: 300px; /* Ancho máximo del cuadro */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    text-align: center; /* Centrar el texto */
+    margin: 10px; /* Margen alrededor del cuadro */
+    opacity: 1; /* Asegura que el elemento sea visible */
+    transition: opacity 0.5s ease-out; /* Transición suave para desvanecer el elemento */
+}
+
+.alertify-notifier {
+    opacity: 0; /* Desaparece el elemento */
+}
+
+.mensaje-alerta {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    color: #333; /* Color de texto oscuro para contraste */
+    padding: 10px; /* Espacio interno reducido */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    z-index: 2000; /* Asegúrate de que sea superior al menú de navegación */
+    max-width: 300px; /* Ancho máximo del cuadro */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    text-align: center; /* Centrar el texto */
+    margin: 10px; /* Margen alrededor del cuadro */
+    opacity: 1; /* Asegura que el elemento sea visible */
+    transition: opacity 0.5s ease-out; /* Transición suave para desvanecer el elemento */
+}
+
+.mensaje-alerta.ocultar {
+    opacity: 0; /* Desaparece el elemento */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    .barmodal {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .nav {
+        padding: 5px 0;
+    }
+
+    .comment {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .modalwhitw {
+        padding: 10px !important;
+    }
+
+    .formwrap {
+        max-width: 100%;
+    }
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 991px) {
+    .barmodal {
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    .nav {
+        padding: 8px 0;
+    }
+
+    .comment {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .modalwhitw {
+        padding: 15px !important;
+    }
+
+    .formwrap {
+        max-width: 80%;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 992px) {
+    .barmodal {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .nav {
+        padding: 10px 0;
+    }
+
+    .comment {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .modalwhitw {
+        padding: 20px !important;
+    }
+
+    .formwrap {
+        max-width: 600px;
+    }
+}
+
+
+body {
+    font-size: 16px; /* Tamaño base */
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        font-size: 15px;
+    }
 }
