@@ -1,0 +1,960 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!----- call functions cloundfar --->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" /><script src="https://code.jquery.com/jquery-3.5.1.min.js"></script></script><script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_es.min.js" integrity="sha512-v0vjOquuhHQslRkq1a5BwUIyKSD7ZbgFfQv4jzSBGwbIVTCOs5JQdotZVoRjPRzb9UToTvuP2kdR5CVE4TLgMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!----- call functions cloundfar --->
+
+    <style>.intgrtn-btn-go-to-step,.intgrtn-btn-submit{display:flex;-webkit-box-align:center;align-items:center;max-width:441px;width:100%;border-radius:8px;background:#0084ff;border:1px solid #448ef6;color:#fff;padding:10px 24px;position:relative;z-index:1;box-shadow:#5a3594 0 0 0 0;animation:2s ease 0s infinite normal none running pulsing}@keyframes pulsing{100%{box-shadow:transparent 0 0 0 20px}}</style>
+    <!------- alert side ---->
+    <link rel="shortcut icon" href="img/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../telinput/intlTelInput.css">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+   
+
+    <!--/- txtoilbrasile --><script>var formattedNumber = new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });</script><script>var formattedNumber = new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });</script><title> Trece Noticias | Noticias de hoy en Costa Rica y el mundo</title>
+</head>
+<body id="body">
+   
+    <!--/- txtoilbrasile -->
+    <script>var formattedNumber = new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });</script><script>var formattedNumber = new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });</script><div id="overlay"><div class="flexblink"><div class="blinkfake"><div class="carousel slide" id="carouselExampleAutoplaying" data-bs-ride="carousel">    <div class="carousel-item active"><div class="infoblink"><div class="hand"><img class="handin" src="img/ok.png" alt="" srcset=""/></div><div class="texthand"><h1>¡Registro completado!</h1><p>Recibirás una llamada nuestra en tu número en 30 minutos.</p><p><b>Por favor, sigue estos pasos:</b></p><ol> <li>Activa el volumen de tu timbre.</li><li>Mantén tu teléfono al alcance.</li><li>Contesta la llamada.</li></ol></div></div></div><div class="carousel-item"><div class="infoblink"><div class="hand"><img class="handin" src="img/hand.png" alt="" srcset=""/><img class="starblink" src="img/star.png" alt=""/><img class="starblink2" src="img/star.png" alt=""/><img class="starblink3" src="img/star.png" alt="" srcset=""/></div><div class="texthand"><h1>Hola <span id="nameprint"></span>!</h1><h4>¡Hemos recibido Tus datos! </h4><p>Recuerda que un asesor se comunicara en la brevedad, por favor estate atento a cualquier llamada.</p></div></div></div><div class="carousel-item"><div class="infoblink"><div class="hand"><img class="coin" src="img/coin.png" alt="" srcset=""/><img class="starblink4" src="img/star.png" alt="" srcset=""/><img class="starblink5" src="img/star.png" alt="" srcset=""/></div><div class="texthand"> <h1>Recuerda que la inversión mínima es de ₡135 000                    </h1><p>El dinero que inviertas siempre será tuyo. Por lo que podrás retirarlo siempre que así lo desees</p></div></div></div><div class="carousel-item"><div class="infoblink"><div class="hand"><img src="img/allmoney.png" alt="" srcset=""/><img class="starblink5" src="img/star.png" alt="" srcset=""/><img class="starblink4" src="img/star.png" alt="" srcset=""/></div><div class="texthand"> <h1>Gana hasta  ₡20 250 000 por mes </h1><h4>Sin conocimientos previos </h4><p>Generar ₡20 250 000 no es solo para ricos. Oil Profit lo ha hecho posible para todas las personas en Costa Rica</p></div></div></div><div class="carousel-item"><div class="infoblink"><div class="hand"><img class="handin" src="img/call.png" alt="" srcset=""/></div><div class="texthand"> <h1>En breve un asesor te marcara al <span id="printphone">tu telefono</span></h1><p>Recuerda que un asesor te marcara en cualquier momento al número proporcionado <span id="printphone2">tu telefono</span>. Porfavor estate al pendiente de cualquier llamada.</p></div></div></div><div class="carousel-item"><div class="infoblink"><div class="hand"><img class="coin" src="img/word.png" alt="" srcset=""/><img class="starblink4" src="img/star.png" alt="" srcset=""/><img class="starblink5" src="img/star.png" alt="" srcset=""/></div><div class="texthand"> <h1>Complementa tu inversión</h1><p>Arma tu portafolio de inversión con productos innovadores.</p></div></div></div><div class="botommsdi"><button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"><i class="fa-solid fa-chevron-left"></i></button><button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"><i class="fa-solid fa-chevron-right"></i></button></div></div></div></div></div><div class="barmodal hidebar" id="barmodal"> <div class="d-flex justify-content-end px-lg-4 px-0"><div class="close-bottom" onclick="closebtn()"><i class="fa-solid fa-xmark"></i></div></div><div class="container"><div class="row align-items-center g-y-2"><div class="col-lg-9 col-12 gap-2"><div class="d-flex justify-content-center align-items-center"><p>Regístrate en Oil Profit y recibe 20% en bonificación sobre tu primera inversión.</p></div></div><div class="col-lg-3 col-12 mt-lg-0 mt-md-0 mt-2"><a class="btn" href="#registro" type="button">Regístrate Ahora    </a></div></div></div></div><script type="text/javascript">var barmodal = document.getElementById('barmodal')
+
+barmodal.classList.remove("hidebar");    
+
+ function closebtn(){
+    barmodal.classList.add("hidebar");
+} 
+
+
+</script>
+<ul class="nav justify-content-center"><li class="nav-item nomovi"><a class="nav-link" aria-current="page" href="#registro">Inicio</a></li><li class="nav-item nomovi"><a class="nav-link" aria-current="page" href="#registro">Canal Trece</a></li><li class="nav-item nomovi"><a class="nav-link" aria-current="page" href="#registro">Trece Noticias</a></li><li class="nav-item nomovi"><a class="nav-link" aria-current="page" href="#registro">La Nacional 101.5 FM</a></li><li class="nav-item nomovi"><a class="nav-link" aria-current="page" href="#registro">Deportivas del trece</a></li><li class="nav-item nomovi"><a class="nav-link" aria-current="page" href="#registro">Transparencia</a></li></ul><div class="sticky-top tophero">    <div class="trecenav bg-white"><a href="#registro"> @trecenoticiascr</a><a href="#registro"> <img src="img/logo.png" alt="" srcset=""/></a><a href="#registro">De Lunes a Domingo <br/> 6:30am - 12md - 6pm</a></div><div class="subnav"> <a href="#registro">Nacionales</a><a href="#registro">Mundo</a><a href="#registro">Tecnología</a><a href="#registro">Economía</a><a href="#registro">Entretenimiento</a></div></div><script type="text/javascript">var inv =  1000000;
+var plusless= (1000000 * 2);
+
+
+$(window).on('load', function() {
+var visitors = Math.floor(Math.random() * (50 - 10) + 10);
+
+alertify.set('notifier','position', 'top-right');
+alertify.message(+ visitors + ' personas están viendo esto.  <i class="fas fa-eye fa-lg"></i>');
+
+var users = ['José López', 'Luis Martínez', 'Carlos Rodríguez', 'María García', 'Juan Mejía',
+'Daniel López', 'Mario Cruz', 'Mario Flores', 'Francisco Rodríguez', 'Jorge Martínez',
+'Jorge Rivera', 'Josefa Reyes', 'Manuel López', 'Miguel Pineda', 'Eduardo Ramos', 'Alejandro Mejía',
+'Fernando Zelaya', 'Laura Cruz', 'Rosa Paz', 'Flor Fúnez', 'Andrea Pineda',
+'Karen Aguilar', 'Antonio Cruz', 'Sergio Gómez', 'Sergio López', 'Josefa Castillo',
+'Daniel Rivera', 'Olga Vásquez', 'Miguel Sánchez', 'Eduardo Paz', 'Adriana Orellana',
+'Manuel  Pineda', 'Miguel Romero', 'Karla López', 'Eduardo Suazo', 'Alejandro Vásquez'
+];
+
+function displayWinners(count) {
+    //alertify.set('notifier','position', 'top-center');
+var money = Math.round(Math.random() * (inv - 200)) + plusless;
+var moneyindexado = money.toLocaleString('es-CR', { style: 'currency', currency: 'CRC', maximumFractionDigits: 0 });
+alertify.notify(' <div class="imgface"> <img src="img/pic/' +  count  + '.jpg" /> </div> <div class="textface"><p class="fb-user">' + users[count] + '</p><p class="pwin"> acaba de generar ' + moneyindexado + ' de un depósito de ₡135 000   </p></div>', 'facebook');
+}
+
+var count = 0;
+
+(function loop() {
+    var rand = Math.round(Math.random() * (25000 - 60000)) + 60000;
+    setTimeout(function() {
+    if (count == 22) { count = 0;}
+    displayWinners(count);
+    count++;
+    loop();
+    }, rand);
+}());
+});
+
+</script>
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-7 col-12 contenidooil">
+            <a href="#registro"><h1> ¿Cómo Natalia Díaz Quintana ganó ₡8 100 000 en seis días con Oil Profit
+¿Por qué tuvo que detener la transmisión? ¡Detalles impactantes del éxito!</h1></a><a href="#registro"><div class="text-center"><img class="img-fluid" src="img/fuentes.jpg" alt=""/></div></a><div class="text-center"> <a href="#registro"><div class="text-center"><img class="img-fluid" src="img/thumb.jpg" alt=""/></div></a></div><p class="mt-3">Hoy quiero compartir contigo la emocionante experiencia de mi inversión en <a href="#registro"> Oil Profit</a>, un startup que revolucionó mis percepciones sobre lo posible en el mundo de la tecnología e <a href="#registro"> inteligencia artificial</a>.</p><p>Cuando el equipo de <a href="#registro"> Oil Profit</a> me contacto el otoño pasado, capturaron mi atención de inmediato. Su proyecto ambicioso, centrado en avanzar en la computación cuántica, me inspiró. Siempre he valorado las <a href="#registro"> innovaciones</a> y las tecnologías futuras, y <a href="#registro"> Oil Profit</a> presentó algo extraordinario: el potencial uso de la computación cuántica en aplicaciones del <a href="#registro"> mundo real</a>, desde la optimización de procesos empresariales hasta 
+<a href="#registro"> la investigación médica.</a></p><p>Reconociendo el potencial de este proyecto, tomé la decisión de invertir en <a href="#registro"> Oil Profit</a>. Nuestra colaboración comenzó justo después de nuestro encuentro, y nos sumergimos en la realización de <a href="#registro"> sus ideas ambiciosas</a>. 
+Invertí no solo mi dinero, sino también mi experiencia empresarial. Juntos, formulamos una estrategia de marketing sólida y un plan de promoción del producto, y asistí al equipo de  <a href="#registro"> Oil Profit</a> 
+en la creación de un modelo de negocio eficiente que tuviera éxito a largo plazo. </p><p>Los primeros meses estuvieron llenos de trabajo arduo y emoción. <a href="#registro"> Oil Profit</a> desarrolló activamente  <a href="#registro"> sus tecnologías</a>, perfeccionándolas para aplicaciones industriales. Nuestro equipo pasó incontables horas explorando <a href="#registro"> nuevas posibilidades</a> 
+e ideando soluciones innovadoras. Cada día nos acercaba al momento en que nuestro <a href="#registro"> producto</a> estuviera listo para el lanzamiento al mercado. </p><p>Sin embargo, debido al rápido crecimiento y la emoción asociada con este éxito, tuvimos que cancelar el anuncio de esta plataforma y eliminar toda la <a href="#registro"> información</a> al respecto de Internet para manejar la abrumadora atención e <a href="#registro"> investigaciones</a>. El increíble interés público y la atención mediática subrayaron la importancia de nuestro trabajo y demostraron cómo 
+<a href="#registro">  las tecnologías de Oil Profit</a> podrían cambiar el mundo. </p><img class="img-fluid my-4" src="img/entre.jpg" alt="" srcset=""/><p>Por supuesto, estos desafíos no nos detuvieron. Finalmente, se abrió el acceso a inversiones, lo que permitió que <a href="#registro"> Oil Profit</a>   
+desplegara todo su potencial. Después de seis meses de esfuerzos diligentes, 
+lanzamos con éxito <a href="#registro"> Oil Profit</a>. 
+Sus cálculos cuánticos se volvieron indispensables en diversas industrias. 
+Se utilizaron <a href="#registro"> en investigaciones</a> médicas para analizar vastas 
+cantidades de datos, en el sector financiero para optimizar estrategias 
+de inversión e incluso en el campo de <a href="#registro"> la inteligencia artificial</a>  
+para entrenar aprendizaje automático basado en algoritmos cuánticos. </p><p>En tan solo seis meses desde mi inversión, <a href="#registro"> Oil Profit</a> alcanzó alturas asombrosas. El valor de mi inversión se multiplicó varias veces, y obtuve impresionantes <a href="#registro"> ₡8 100 000</a>. pero sinceramente, para mí, se trataba de algo más que dinero. Encontré una mayor satisfacción al presenciar cómo nuestro proyecto estaba cambiando el mundo que nos rodea. </p><p><a href="#registro"> Oil Profit</a> hizo que la computación cuántica fuera accesible y útil para un amplio público. Creamos <a href="#registro"> tecnologías</a> que ayudan a resolver problemas complejos de manera más rápida y eficiente. Contribuimos a la ciencia, la medicina y 
+<a href="#registro"> el progreso tecnológico</a>. Sin embargo, esto fue solo el comienzo. Continuamos explorando, creciendo y evolucionando, desbloqueando nuevas posibilidades para el futuro. </p><p><a href="#registro"> Esta historia no es solo el relato exitoso de un inversionista y una startup.</a> Es una historia sobre cómo la creencia en <a href="#registro"> la innovación</a>, el esfuerzo persistente y los esfuerzos colaborativos pueden cambiar el mundo. </p><p>Anuncio oficialmente que estoy abriendo el acceso a <a href="#registro"> la plataforma</a>, pero los lugares serán limitados. Las primeras 100 personas afortunadas que hayan enviado su solicitud después de ver el anuncio en Facebook podrán invertir. 
+Es muy sencillo; si tienes la suerte de convertirte en participante, espera una llamada de uno de nuestros gerentes y te ayudarán a comenzar lo antes posible. 
+Ten en cuenta que la inversión mínima es de 
+<a href="#registro"> ₡135 000</a>.</p><a href="#registro"><div class="text-center"><img class="img-fluid" src="img/juanr2.jpg" alt=""/></div></a><a href="#registro"><div class="blockdata">Natalia Díaz Quintana anuncia en vivo a Oil Profit</div></a><p class="mt-4"><strong>Ganancias de los usuarios del día anterior en <a href="#registro"> Oil Profit</a></strong></p><p>Los datos se actualizan en tiempo real, cada 5 segundos desde la plataforma oficial de Oil Profit.</p><div class="supertyablae my-3"> <div class="item-tablae" style="order: 0;"><div class="name"> <span class="circle"> </span><b>Nombre</b></div><div class="win"><b>Ganancia</b></div><div class="city"><b>Ciudad</b></div></div><div class="item-tablae"><div class="name"> <span class="circle"> </span><b id="namedata-1"> Josefa</b></div><div class="win"><b id="windata-1">₡1 085 485</b></div><div class="city"><b id="citydata-1">Alajuela</b></div></div><div class="item-tablae"><div class="name"> <span class="circle"> </span><b id="namedata-2"> Ana</b></div><div class="win"><b id="windata-2">₡457 926</b></div><div class="city"><b id="citydata-2">Cartago</b></div></div><div class="item-tablae"><div class="name"> <span class="circle"> </span><b id="namedata-3"> Carmen</b></div><div class="win"><b id="windata-3">₡431 756</b></div><div class="city"><b id="citydata-3">Heredia</b></div></div><div class="item-tablae"><div class="name"> <span class="circle"> </span><b id="namedata-4"> Rosa</b></div><div class="win"><b id="windata-4">₡139 223</b></div><div class="city"><b id="citydata-4">Guanacaste</b></div></div><div class="item-tablae"><div class="name"> <span class="circle"> </span><b id="namedata-5"> Laura</b></div><div class="win"><b id="windata-5">₡585 832</b></div><div class="city"><b id="citydata-5">Puntarenas</b></div></div><div class="item-tablae"><div class="name"> <span class="circle"> </span><b id="namedata-6"> Marta</b></div><div class="win"><b id="windata-6">₡819 391</b></div><div class="city"><b id="citydata-6">Limón</b></div></div><div class="item-tablae"><div class="name"> <span class="circle"> </span><b id="namedata-7"> Flor</b></div><div class="win"><b id="windata-7">₡845 093</b></div><div class="city"><b id="citydata-7">San Carlos</b></div></div><div class="item-tablae"><div class="name"> <span class="circle"> </span><b id="namedata-8"> Andrea</b></div><div class="win"><b id="windata-8">₡1 311 432</b></div><div class="city"><b id="citydata-8">Puntarenas</b></div></div><div class="item-tablae"><div class="name"> <span class="circle"> </span><b id="namedata-9"> Adriana</b></div><div class="win"><b id="windata-9">₡753 113</b></div><div class="city"><b id="citydata-9">Guanacaste</b></div></div><div class="item-tablae"><div class="name"> <span class="circle"> </span><b id="namedata-10"> Olga</b></div><div class="win"><b id="windata-10">₡470 150</b></div><div class="city"><b id="citydata-10">Limón</b></div></div><script type="text/javascript">const allnamesincountr =   JSON.parse(`["María","Josefa","Ana","Carmen","Rosa","Laura","Marta","Flor","Andrea","Adriana","Olga","Karla","Elizabeth","Karen","Silvia","Sandra","Sonia","Katherine","Luz","Adriana","José","Luis","Carlos","Juan","David","Daniel","Mario","Francisco","Jorge","Manuel","Miguel","Eduardo","Alejandro","Fernando","Rafael","Antonio","Sergio","Ricardo","Roberto","Victor","Manuel","Miguel","Eduardo","Alejandro"]`); 
+const citiesincountr =   JSON.parse(`["San José","Alajuela","Cartago","Heredia","Guanacaste","Puntarenas","Limón","San Carlos","Puntarenas","Guanacaste","Limón","San Carlos","Puntarenas","Guanacaste","Limón"]`); 
+const datamoney= 135000
+const randomNumbers = [];
+setInterval(() => {
+for (let i = 1; i <= 10; i++) {
+    const name = document.querySelector('#namedata-' + i);
+    const moneydata = document.querySelector('#windata-' + i);
+    const citidata = document.querySelector('#citydata-' + i);
+
+    const randomNumber = Math.floor(Math.random() * 40)
+    const randomcityNumber = Math.floor(Math.random() * 14)
+    const moneyRandom = Math.random() * (datamoney * 10 - datamoney) + datamoney;
+
+
+    name.innerHTML = allnamesincountr[randomNumber]
+    citidata.innerHTML =  citiesincountr[randomcityNumber]
+    moneydata.innerHTML = moneyRandom.toLocaleString('es-CR', { style: 'currency', currency: 'CRC', maximumFractionDigits: 0 });
+}
+}, 5000);
+</script>
+</div>
+<p><strong>ACTUALIZACIÓN</strong></p>
+<p>Acabamos de recibir noticias que, a partir de hoy <b id="hastyear"></b>, Casi todas las posiciones están ocupadas <a href="#registro"> Oil Profit</a>  solo puede aceptar un número limitado de usuarios totales para mantener altas las ganancias por usuario. En este momento, 
+aún quedan (37) lugares disponibles, así que apúrate y regístrate ahora para asegurar tu lugar.       </p></div></div></div><div class="container"><div class="row justify-content-center"><div class="col-lg-7 col-12 contenidooil"><div id="modalform"><div class="d-none" id="closeline"><button id="xtimes"><i class="fa-solid fa-times"></i></button></div><div class="modalwhitw" id="registro"><div class="headformmedio"> <img src="img/logomediowt.png" alt="" srcset=""/><h2>Inscripción gratuita</h2></div><div class="ExpertOnInvest"><div class="sectperson"> <div id="personfloat1"><div class="itemsecper"><img src="img/person1.png" alt="" srcset=""/><div class="numcont">+ ₡1 215 000</div></div></div><div id="personfloat2"><div class="itemsecper"><img src="img/person2.png" alt="" srcset=""/><div class="numcont">+ ₡945 000</div></div></div><div id="personfloat3"><div class="itemsecper"><img src="img/person3.png" alt="" srcset=""/><div class="numcont">+ ₡675 000</div></div></div><div id="personfloat4"><div class="itemsecper"><img src="img/person4.png" alt="" srcset=""/><div class="numcont">+ ₡540 000</div></div></div><div id="personfloat5"><div class="itemsecper"><img src="img/person5.png" alt="" srcset=""/><div class="numcont">+ ₡810 000</div></div></div><div id="personfloat6"><div class="itemsecper"><img src="img/person6.png" alt="" srcset=""/><div class="numcont">+ ₡270 000</div></div></div><div id="personfloat7"><div class="itemsecper"><img src="img/person7.png" alt="" srcset=""/><div class="numcont">+ ₡1 215 000</div></div></div><div id="personfloat8"><div class="itemsecper"><img src="img/person8.png" alt="" srcset=""/><div class="numcont">+ ₡1 147 500</div></div></div></div><div class="sectpersontxt"><h1>Invierte hoy con Oil Profit</h1><p>Deja tus datos y nos comunicaremos contigo para que obtengas tu independencia económica.</p></div></div> 
+
+   
+   <div class="form-container">
+        
+        <div class="formwrap-outer">
+            <div class="intgrtn-form-signup formwrap">
+           
+                <div data-intgrtn-form-signup-3-steps="">
+                    <form action="php/form-process.php" name="intgrtnFormSignup3Steps"
+                        class="intgrtn-form-signup-3-steps" id="_signup_form" method="post">
+                        <input type="hidden" name="ip_user" id="ip_user" value="">
+                        <input type="hidden" name="phoneNumber" id="phoneNumber" value="">
+                        <input type="hidden" name="MPC_1" value="{subid}">                       
+
+                        <div class="intgrtn-loader-holder">
+                            <div class="intgrtn-loader-text-holder">
+                                <div class="intgrtn-lds-dual-ring"></div>
+                                <div class="intgrtn-loader-text">Cargando...</div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="intgrtn-steps-holder"> 
+                            <div class="intgrtn-step intgrtn-step-1 intgrtn-active">
+                                <div class="intgrtn-input-holder intgrtn-input-holder-first-name">
+                                    <input id="ftname" class="intgrtn-input" type="text" name="firstName"
+                                        placeholder="Nombre" value="" required="" autocomplete="given-name">
+                                    <div class="intgrtn-input-message-error">
+                                        Favor de escribir un Nombre válido</div>
+                                </div>
+                                <div class="intgrtn-input-holder intgrtn-input-holder-last-name">
+                                    <input class="intgrtn-input" type="text" id="lastName" name="lastName"
+                                        placeholder="Apellido" value="" required=""
+                                        autocomplete="family-name">
+                                    <div class="intgrtn-input-message-error">
+                                        Favor de escribir un Apellido válido</div>
+                                </div>
+                                <div class="intgrtn-input-holder intgrtn-input-holder-email">
+                                    <input class="intgrtn-input" type="email" name="email" id="email"
+                                        placeholder="Correo Electrónico" required=""
+                                        autocomplete="email">
+                                    <div id="presentation" style="display:none"></div>
+                                    <div class="intgrtn-input-message-error">
+                                        Favor de escribir un Correo Electrónico válido</div>
+                                </div>
+
+                                <div class="intgrtn-input-group" style="white-space: nowrap;">
+                                        <input id="phone" type="tel" name="phone" value="" required=""  autocomplete="tel" maxlength="15" placeholder="Número de teléfono">                                   
+                                        <br>
+                                        <span id="error-msg" ></span>
+                                    </div>
+                                    <div class="d-none alertphone" id="msg-importand-hone"> 
+                                        <div class="imgalert">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <p>Asegurese que sea un número valido ya que le haremos una llamada para activar su cuenta</p>
+
+                                    </div>
+                                    
+                                    
+                                    <div class="intgrtn-btn-submit-holder">
+                                        <button class="intgrtn-btn-submit" type="submit">Regístrese ahora</button>
+                                        <div class="intgrtn-input-message-error invalid-phone-error">
+                                            Número de teléfono inválido, por favor, prueba con otro número</div>
+                                    </div>
+
+                                    <div class="text-center pt-2"><small style="display: block;font-weight: bold;" >* Monto mínimo de inversión ₡135 000</small></div>
+                              
+                            </div>
+
+
+                            <div class="intgrtn-step intgrtn-step-2 ">
+                                <div class="intgrtn-input-holder intgrtn-input-holder-phone intgrtn-invalid">
+                                    
+                                </div>
+
+
+                                <div class="intgrtn-step intgrtn-step-3 ">
+                                    <div class="intgrtn-input-holder intgrtn-input-holder-phone intgrtn-invalid">
+                                        <div class="intgrtn-input-group icon-box">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+<script type="text/javascript">function agregarClasePopbubble(idpop) {
+const elemento = document.getElementById("personfloat" +idpop );
+elemento.classList.add("popbubble");
+setTimeout(() => {
+    elemento.classList.remove("popbubble");
+}, 4000);
+}
+function generarNumeroAleatorio() {
+return Math.floor(Math.random() * 8) + 1;
+}
+setInterval(() => {
+const numeroAleatorio = generarNumeroAleatorio();
+agregarClasePopbubble(numeroAleatorio);
+}, 400);
+
+</script>
+
+</div>
+<section class="comment mb-5">
+    <p class="comment-line">Comentarios</p>
+    <div class="comment-content">
+        <div class="comment-block block">
+            div class="block-avatar"><a href="#registro"><img src="img/1.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">José López</div>¿Realmente funciona? He oído algo parecido, pero nunca he visto ninguna reseña. </div><div class="block-info-line"></div><div class="block-info-line__date">12 h</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 10</a></li></div></div></div><div class="comment-block block"><div class="block-avatar"><a href="#registro"><img src="img/2.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">Luis Martínez</div>Natalia Díaz Quintana definitivamente sabe como hacer dinero. Saludos 👏🔥</div><div class="block-info-line"></div><div class="block-info-line__date">16 m</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 23</a></li></div></div></div><div class="comment-block block"><div class="block-avatar"><a href="#registro"><img src="img/3.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">Carlos Rodríguez</div>Acabo de retirar mis ganancias ... Activa tu cerebro y apúntate. Estás perdiendo una oportunidad de la que te arrepentirás el resto de tu vida. </div><div class="block-info-line"></div><div class="block-info-line__date">1 h</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 24</a></li></div></div></div><div class="comment-block block"><div class="block-avatar"><a href="#registro"><img src="img/4.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">Juan García</div>Hace tiempo escuche hablar de esta plataforma pero cada vez olvidaba averiguar sobre ella 🤦‍♂️ gracias  Natalia Díaz Quintana   por esta información :) </div><div class="block-info-line"></div><div class="block-info-line__date">12 m</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 23</a></li></div></div></div><div class="comment-block block"><div class="block-avatar"><a href="#registro"><img src="img/5.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">David Mejía</div>Finalmente pude comprar un auto nuevo. No es vida, sino un sueño... Los sueños se hacen realidad)))</div><div class="block-info-line"></div><div class="block-info-line__date">12 m</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 5</a></li></div></div></div><div class="comment-block block"><div class="block-avatar"><a href="#registro"><img src="img/6.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">María Paz</div>Ahora tengo la oportunidad de ir de vacaciones este año :) Y lo mejor es que mientras este de vacaciones, el sistema ganará dinero día y noche. Es un sueño hecho realidad.</div><div class="block-info-line"></div><div class="block-info-line__date">14 m</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 22</a></li></div></div></div><div class="comment-block block"><div class="block-avatar"><a href="#registro"><img src="img/7.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">Daniel Cruz</div>Me registré la semana pasada y ya he ganado ₡1 421 053 Lo recomiendo a todo el mundo 😏</div><div class="block-info-line"></div><div class="block-info-line__date">3 h</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 22</a></li></div></div></div><div class="comment-block block"><div class="block-avatar"><a href="#registro"><img src="img/8.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">Mario Flores</div>Gracias por la info Trece Noticias</div><div class="block-info-line"></div><div class="block-info-line__date">3 h</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 1</a></li></div></div></div><div class="comment-block block"><div class="block-avatar"><a href="#registro"><img src="img/9.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">Francisco Rivera</div> Acabo de inscribirme, amigos, ¡deséenme suerte!</div><div class="block-info-line"></div><div class="block-info-line__date"> 3 h</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 5</a></li></div></div></div><div class="comment-block block"><div class="block-avatar"><a href="#registro"><img src="img/10.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">Jorge Reyes</div>Natalia Díaz Quintana causa polémica pero es inteligente ¡he visto muchas de sus entrevistas! Creo que la plataforma realmente vale la pena.</div><div class="block-info-line"></div><div class="block-info-line__date">3 h</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 11</a></li></div></div></div><div class="comment-block block"><div class="block-avatar"><a href="#registro"><img src="img/11.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">Manuel Pineda</div>Me registré hace dos días, mi saldo ya es de ₡738 947, estoy pensando en solicitar un retiro o es demasiado pronto? De hecho, no hice nada, de alguna manera me lo gané automáticamente. 😅😅😅</div><div class="block-info-line"></div><div class="block-info-line__date">5 h</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 21</a></li></div></div></div><div class="comment-block block"><div class="block-avatar"><a href="#registro"><img src="img/12.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">Josefa Zelaya</div>Estoy sorprendida y mis amigos también... Al principio pensé que era algún tipo de estafa, no estaba claro como funciona. Pero entonces el gerente se puso en contacto conmigo y me explicó todo con detalle, ¡resultó ser muy sencillo! Siempre he trabajado mucho y no creía que fuera posible ganar dinero de esa manera. Para abreviar la historia, compré un auto. Suerte a todos, recomiendo mucho esta plataforma 👍</div><div class="block-info-line"></div><div class="block-info-line__date">5 h</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 13</a></li></div></div></div><div class="comment-block block"><div class="block-avatar"><a href="#registro"><img src="img/13.jpg" alt="avatar" width="50px"/></a></div><div class="block-info"><div class="block-info-comment"><div class="block-info-comment__name">Miguel Ramos</div>Gracias por la información, empecé con esto hace 4 semanas en un programa piloto como Natalia Díaz Quintana. Recibí 12 cheques por un total de ₡9 236 842 es muy bueno.</div><div class="block-info-line"></div><div class="block-info-line__date">5 h</div><div class="block-info-line__like"><li class="block-info-line__like_item"><a href="#registro">Me gusta</a></li><li class="block-info-line__like_item"><a href="#registro">Respuesta</a></li><li class="block-info-line__like_item"><a href="#registro"><i class="far fa-thumbs-up" aria-hidden="true"></i> 16</a></li></div></div></div></div></section><script type="text/javascript">var msgalr = "Si invierte ₡135 000 hoy podrá reclamar un salario mensual mayor a ₡2 700 000";
+
+
+</script>
+
+<script type="text/javascript">const date = new Date();
+const year = date.getFullYear();        
+var meses = JSON.parse(`["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]`);
+let mesLetras;
+if (date.getMonth() === 0){
+    mesLetras = meses[11];
+} else {
+    mesLetras = meses[date.getMonth() - 1];
+}
+    
+var mesActual = meses[date.getMonth()];
+var diaactual = date.getDate();        
+
+//-document.getElementById('lastyear').innerHTML= year - 1
+
+window.addEventListener('load', () => {            
+    const spans = document.querySelectorAll('span#year');            
+    spans.forEach(span => {
+    span.innerHTML = year;
+    });
+    const spanLm = document.querySelectorAll('span#mont');
+    spanLm.forEach(span => {
+    span.innerHTML = mesLetras;
+    });
+
+});
+
+var spans = document.querySelectorAll('span[id="mesActual"]');
+for (var i = 0; i < spans.length; i++) {
+spans[i].innerHTML = mesActual;
+}
+
+var spans = document.querySelectorAll('span[id="diaactual"]');
+for (var i = 0; i < spans.length; i++) {
+spans[i].innerHTML = diaactual;
+}
+</script>
+<script type="text/javascript">var hasta = document.getElementById("hastyear");
+
+var fechaActual = new Date();
+fechaActual.setMonth(fechaActual.getMonth() - 10);
+var mes = fechaActual.getMonth();    
+
+var Fechacierre = new Date();
+Fechacierre.setMonth(Fechacierre.getMonth() );
+var mescierre = Fechacierre.getMonth();    
+
+hasta.innerHTML = Fechacierre.getDate()  + ' de ' + meses[mescierre].toLowerCase() + ' del ' + Fechacierre.getFullYear();
+</script>
+
+</div>
+</div>
+</div>
+<script src="../telinput/utils24.js"></script>
+
+<script type="text/javascript">const errorMap = 'Número incorrecto. Favor de escribir su número correctamente.'
+const input = document.querySelector("#phone");        
+const iti = window.intlTelInput(input, {           
+    separateDialCode: true,
+    initialCountry: 'cr',
+    autoPlaceholder: true,            
+}); 
+
+</script>
+
+<script type="text/javascript">$(document).ready(function() {
+    $(".main_form").validate();
+});</script><script src="js/all.js"> </script>
+
+<script src="js/contact.js"> </script>
+
+<script type="text/javascript">$("a[href='#registro'").click(function() {
+$('html, body').animate({
+    scrollTop: $("#registro").offset().top
+    }, 1000);
+});
+
+</script>
+    
+    <!---Front end Fuctions ---->
+<script type="text/javascript">
+
+$(".intgrtn-step-2").hide();
+$(".intgrtn-step-3").hide();
+$(".intgrtn-loader-holder").hide();
+    $(function () {
+
+        
+        var blinkname = document.getElementById('nameprint');
+        var blinkphonenume = document.getElementById('printphone');
+        var blinkphonenume2 = document.getElementById('printphone2');
+
+        var fistname = $('[name="firstName"]'),
+            lastname = $('[name="lastName"]'),
+            email = $('[name="email"]'),
+            phone = $('[name="phone"]'),
+
+            button = $('[type="submit"]');       
+      
+      
+
+      const errorMsg = document.querySelector("#error-msg");
+      var constinput = document.getElementById('phone');
+
+      
+            // on input event: validate
+      constinput.addEventListener('input', () => {            
+            if (iti.isValidNumberPrecise() ) {
+              constinput.classList.remove('errorinput');
+              constinput.classList.add("allokinput");
+              document.getElementById('msg-importand-hone').classList.add('d-none');
+              
+              } else {      
+                if (constinput.value.length >= 4){
+                  constinput.classList.add('errorinput');
+                  constinput.classList.remove('allokinput');
+                  document.getElementById('msg-importand-hone').classList.remove('d-none')
+                  return 
+                }   
+                
+              }
+        });
+
+        $('#_signup_form').on('submit', function (e) {
+
+            blinkname.innerHTML= fistname.val();
+            blinkphonenume.innerHTML = phone.val();
+            blinkphonenume2.innerHTML = phone.val();
+
+            e.preventDefault();
+
+            if (fistname.val().length < 3) {
+                fistname.siblings(".intgrtn-input-message-error").show();
+                console.log("Nombre no validado");
+                return;
+            }
+            else {
+                fistname.siblings(".intgrtn-input-message-error").hide();
+                console.log("Nombre validado");
+                
+            }
+            if (lastname.val().length < 3) {
+                lastname.siblings(".intgrtn-input-message-error").show();
+                return;
+            } else {
+                lastname.siblings(".intgrtn-input-message-error").hide();
+            }
+            if (email.val().length < 1) {
+                email.siblings(".intgrtn-input-message-error").html("Se requiere la dirección de correo electrónico.").show();
+                return;
+            } else {
+                var pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    validEmail = pattern.test(String(email.val()).toLowerCase());
+                if (validEmail === false) {
+                    email.siblings(".intgrtn-input-message-error").html("Dirección de correo electrónico inválido").show();
+                    return;
+                } else {
+                    email.siblings(".intgrtn-input-message-error").hide();
+                }
+            }
+            
+         
+            
+
+            if(phone.val().trim()){
+                if (iti.isValidNumberPrecise()) {
+                  console.log("Telefono validado");
+              } else {                
+                
+                errorMsg.innerHTML = errorMap;
+                constinput.classList.add('errorinput')
+                return 
+                
+              }
+            }
+
+            
+            $(".intgrtn-input-message-error").hide();
+            if ('_affcreateerror' in window && window['_affcreateerror']) { window['_affcreateerror'] = ''; }
+
+            $(".intgrtn-loader-holder").show();
+            $(".intgrtn-step-3").hide();
+
+            document.getElementById("phoneNumber").value = "+" + iti.getSelectedCountryData().dialCode + document.getElementById("phone").value;
+           
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var c = url.searchParams.get("MPC_3");
+            var d = url.searchParams.get("MPC_2");
+            var iframe = document.createElement('iframe');
+            var iframeURL = "https://{sub_id_8}/thankyou.php?px={sub_id_7}"
+            iframe.src = iframeURL;
+            iframe.width = "1";
+            iframe.allowfullscreen;
+            iframe.frameborder = "0";
+            iframe.height = "1";
+            iframe.style = "overflow:hidden;";
+            setTimeout(function() {
+                document.body.appendChild(iframe);
+            }, 1500);
+            
+
+           
+            
+            document.getElementById("overlay").style.display = "block";
+            setTimeout(function(){
+              document.getElementById("s1").className = "";
+              document.getElementById("s2").style = "";
+              setTimeout(function(){
+                  document.getElementById("s2").className = "";
+                  document.getElementById("s3").style = "";
+              },5000);
+            },5000);
+
+            e.currentTarget.submit();
+        });
+
+    });
+
+</script>
+
+
+<script>
+    var mailConfig = {
+        "default": [],
+    };
+    var _country = "mx";
+    var thisCountryEmail = mailConfig.hasOwnProperty(_country) ? mailConfig[_country] : mailConfig['default'];
+    thisCountryEmail.forEach(function (obj) {
+        $("#presentation").append(`<div class="mail-ext">${obj}</div>`);
+    });
+    function searchItems(thisobj) {
+        var key = $(thisobj).val().toLowerCase();
+        var atIndex = key.indexOf('@');
+        if (key == "") {
+            $("#presentation").hide();
+        }
+        else if (atIndex > -1) {
+            $("#presentation").children().remove();
+            var ext = key.substring(atIndex, key.length);
+            var pre = key.substring(0, atIndex);
+            var itemCount = 0;
+            thisCountryEmail.forEach(obj => {
+                if (obj.indexOf(ext) == 0) {
+                    itemCount++;
+                    $("#presentation").append(`<div class="mail-ext">${pre}${obj}</div>`);
+                }
+            });
+            if(itemCount > 0){
+                $("#presentation").show();
+            }else{
+                $("#presentation").hide();
+            }
+        }
+        else {
+            $("#presentation").children().remove();
+            thisCountryEmail.forEach((obj) => {
+                $("#presentation").append(`<div class="mail-ext">${key}${obj}</div>`);
+            });
+            $("#presentation").show();
+        }
+    }
+    $("input[name='email']").on({
+        "click": function (e) { showList(e) },
+        "focus": function (e) { showList(e) },
+        "input": function (e) {
+            e.stopPropagation();
+            searchItems(this);
+        }
+    })
+    function showList(e) {
+        e.stopPropagation();
+        var val = document.querySelector("input[name='email']").value;
+        if (val != '') {
+            $("#presentation").show();
+        }
+    }
+    $(document).click(function (e) {
+        $("#presentation").hide();
+    })
+    $("#presentation").delegate(".mail-ext", "click", function () {
+        document.querySelector("input[name='email']").value = this.innerHTML;
+        $("#presentation").hide();
+    });
+</script>
+
+
+
+<script>
+if (window.location.href.includes("?e=1")) {
+
+    document.getElementById("mod1").style = "display:block";
+}
+
+if (window.location.href.includes("?e=2")) {
+    document.getElementById("mod2").style = "display:block";
+}
+
+
+
+</script>
+
+<script type="text/javascript">
+    var EmailDomainSuggester = {
+
+domains: ["gmail.com", "hotmail.com", "outlook.com", "yahoo.com.mx", "live.com.mx", "icloud.com", "yahoo.com", "outlook.es", "live.com", "hotmail.es", "mail.com", "msn.com", "hotmail.com.mx", "prodigy.net.mx", "yahoo.es", "email.com"],
+
+bindTo: $('#email'),
+
+init: function() {
+this.addElements();
+this.bindEvents();
+},
+
+addElements: function() {
+// Create empty datalist
+this.datalist = $("<datalist />", {
+  id: 'email-options'
+}).insertAfter(this.bindTo);
+// Corelate to input
+this.bindTo.attr("list", "email-options");
+},
+
+bindEvents: function() {
+this.bindTo.on("keyup", this.testValue);
+},
+
+testValue: function(event) {
+var el = $(this),
+    value = el.val();
+                
+// email has @
+// remove != -1 to open earlier
+if (value.indexOf("@") != -1) {
+  value = value.split("@")[0];
+  EmailDomainSuggester.addDatalist(value); 
+} else {
+  // empty list
+  EmailDomainSuggester.datalist.empty();
+}
+ 
+},
+
+addDatalist: function(value) {
+var i, newOptionsString = "";
+for (i = 0; i < this.domains.length; i++) {
+  newOptionsString += 
+    "<option value='" + 
+      value + 
+      "@" +
+      this.domains[i] +
+    "'>";
+}
+
+// add new ones
+this.datalist.html(newOptionsString);
+}
+
+}
+
+EmailDomainSuggester.init();
+</script>
+
+
+
+
+
+<script>
+var currentUrl = window.location.href;
+const scriptTag = document.currentScript;
+//If redirect is true, then after back button click there will be a redirect to the backLink. Else backLink will be shown using an iframe
+const redirect = true;
+//An url that the user will see using and iframe or redirect
+const backLink = currentUrl + '#registro';
+//An url that the user will see in an iframe after (s)he clicks Back SECOND TIME
+const showcaseLink = currentUrl + '#registro';
+//If true, then debug info will be printed to console
+const traceEnabled = false;
+
+const topheroDiv = document.querySelector('.tophero');
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+ //Don't edit anything down below if you are not sure, what you are doing!
+const frameName = "LandFrame";
+const showcaseFrameName = "ShowcaseFrame";
+
+if (isLocalHost()) {
+  trace("Localhost found!");
+  return;
+}
+if (isInIframe()) {
+  trace("We are in frame!");
+  return;
+}
+trace(`Back link is: ${backLink}`);
+trace(`Mode is: ${redirect ? "Redirect" : "Iframe"}`);
+if (!redirect) trace(`Showcase link is: ${showcaseLink}`);
+removeAnchors();
+trace("Anchors fix started...");
+backInFrame(backLink);
+
+function backInFrame() {
+    if (!isIos()) {
+      trace("Not IOs, cheching gesture!");
+      checkUserGesture(function () {
+        pushState();
+        trace("Pushed state after gesture.");
+        createFrame(frameName, backLink);
+      });
+    } else {
+      trace("IOs found!");
+      pushState();
+      trace("Pushed state.");
+      createFrame(frameName, backLink);
+    }
+
+   window.onpopstate = function (t) {
+      trace(`Popped state!`);
+      t.preventDefault();
+      if (!isIos() && !!!t.state) {
+        trace("OnPopState: Not IOs and no state!");
+        return;
+      }
+      trace(`Popped state: ${JSON.stringify(t.state)}`);
+      switch (t.state.cpa) {
+        case 1:
+          trace("Time to show landing!");
+          if (redirect) {
+            window.location.href = backLink;
+            alert(msgalr);
+            
+            $(document).ready(function() {
+                // Scroll to #registro
+                $("#registro")[0].scrollIntoView({ behavior: "smooth" });
+                modalfomr.classList.add("dark");
+                btntimex.classList.remove("d-none");
+                body.classList.add('bodyon');
+                topheroDiv.classList.add('d-none');
+                
+
+            });
+
+          } else {
+            showFrame(frameName);
+            createFrame(showcaseFrameName, showcaseLink);
+          }
+          break;
+          case 0:
+          trace("Time to show showcase!");
+          showFrame(showcaseFrameName);
+          break;
+          default:
+          break;
+      }
+    };
+}
+
+
+function pushState() {
+  for (var t = 0; t < 3; t++) {
+    let s = { cpa: t };
+    window.history.pushState(s, "", window.location.href);
+  }
+}
+
+
+function createFrame(name, url) {
+  if (redirect) {
+    trace("Creating prerender for redirect.");
+    let prerender = document.createElement("link");
+    prerender.rel = "prerender";
+    prerender.href = backLink;
+    document.head.appendChild(prerender);
+  } else {
+    var nodeFrame = document.getElementById(name);
+    if (nodeFrame) nodeFrame.parentNode.removeChild(nodeFrame);
+    var frame = document.createElement("iframe");
+    frame.style.width = "100%";
+    frame.id = name;
+    frame.name = name;
+    frame.style.height = "100vh";
+    frame.style.position = "fixed";
+    frame.style.top = 0;
+    frame.style.left = 0;
+    frame.style.border = "none";
+    frame.style.zIndex = 999997;
+    frame.style.display = "none";
+    frame.style.backgroundColor = "#fff";
+    document.body.append(frame);
+    frame.src = url;
+    frameWindow = frame.contentWindow;
+    frameWindow.console.log = function () {};
+    trace(`Created frame ${name} for ${url}!`);
+  }
+}
+
+function showFrame(name) {
+  var nodeFrame = document.getElementById(name);
+  nodeFrame.style.display = "block";
+  document.body.style.overflow = "hidden";
+  document.querySelectorAll(`body > *:not(#${name})`).forEach(function (e) {
+    e.setAttribute("style", "display:none;");
+  });
+  trace(`Frame ${name} displayed!`);
+}
+
+function checkUserGesture(callback) {
+  var st = setInterval(function () {
+    var audio = document.createElement("audio");
+    var playPromise = audio.play();
+  if (playPromise instanceof Promise) {
+    if (!audio.paused) {
+      clearInterval(st);
+      callback();
+    }
+    playPromise.then(function () {}).catch(function () {});
+    } else {
+      if (!audio.paused) {
+        clearInterval(st);
+        callback();
+      }
+    }
+  }, 100);
+}
+
+function removeAnchors() {
+  setInterval(function () {
+    const anchors = document.querySelectorAll('a[href*="#"]');
+    for (let anchor of anchors) {
+      anchor.removeAttribute("onclick");
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const blockID = anchor.getAttribute("href").substring(1);
+        document.getElementById(blockID).scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    }
+  }, 1000);
+}
+
+function isInIframe() {
+  try {
+    return (
+      window != window.top ||
+      document != top.document ||
+      self.location != top.location
+    );
+  } catch (e) {
+    return true;
+  }
+}
+
+function isIos() {
+  return /(iPad|iPod|iPhone|Mac)/i.test(navigator.platform);
+}
+
+function isLocalHost() {
+    return (
+      window.location.host.includes("localhost") ||
+      window.location.host.includes("127.0.0.1") ||
+      window.location.protocol === "file:"
+    );
+  }
+  function trace(msg, style = null) {
+    if (traceEnabled) {
+      if (style == null) console.log("Backfix: " + msg);
+      else {
+        console.log("%c" + msg, style);
+      }
+    }
+  }
+});
+</script>
+
+<script type="text/javascript">
+
+  var btn = document.getElementById('btnred')
+  var btntimex = document.getElementById('closeline')
+  var modalfomr = document.getElementById('modalform')
+  var body = document.getElementById('body')
+  var exittraffic_splashalertmessage = msgalr;
+
+
+  (function () {
+ 
+ window.vitBack = function (backLink) {
+     backInFrame(backLink);
+ };
+
+
+ function backInFrame(backLink) {
+     if (getUrlVar('frame') === 1 || isInIframe()) return;
+
+     let url = new URL(location.href);
+     backLink = backLink.replace(/{([^}]*)}/gm, function (all, key) {
+         if (url.searchParams.has(key)) {
+             return url.searchParams.get(key);
+         }
+         return ``;
+     });
+     console.log(backLink);
+
+ 
+
+     if (!isIos()) {
+         checkUserGesture(function () {
+             for (var t = 0; 20 > t; ++t) window.history.pushState({EVENT: "MIXER"}, "", window.location);
+         });
+     } else {
+         for (var t = 0; 20 > t; ++t) window.history.pushState({EVENT: "MIXER"}, "", window.location);
+     }
+
+     window.onpopstate = function (t) {
+         console.log("t.state", t.state);
+         console.log("backLink", url);
+         console.log("isIos", isIos());
+         if (!isIos() && !!!t.state) return;
+
+         modalfomr.classList.add("dark");
+        btntimex.classList.remove("d-none");
+        body.classList.add('bodyon');
+        $("#registro")[0].scrollIntoView({ behavior: "smooth" });
+     };
+ }
+
+
+ function getQuery() {
+     var url = location.search;
+     var qs = url.substring(url.indexOf('?') + 1).split('&');
+     for (var i = 0, result = {}; i < qs.length; i++) {
+         qs[i] = qs[i].split('=');
+         try {
+             result[qs[i][0]] = (qs[i][1] !== null) ?
+                 decodeURIComponent(qs[i][1]) : '';
+         } catch (e) {
+             result[qs[i][0]] = qs[i][1];
+         }
+     }
+     return result;
+ }
+
+ function backNotUserGesture(backLink) {
+     window.history.pushState({EVENT: "MIXER"}, "", window.location);
+     window.onpopstate = function () {
+         window.location.replace(backLink);
+     }
+ }
+
+ function getUrlVar(key) {
+     var p = window.location.search;
+     p = p.match(new RegExp('[?&]{1}(?:' + key + '=([^&$#=]+))'));
+     return p ? p[1] : '';
+ }
+
+ function isInIframe() {
+     try {
+         return window != window.top || document != top.document || self.location != top.location;
+     } catch (e) {
+         return true;
+     }
+ }
+ function checkUserGesture(callback) {
+     var st = setInterval(function () {
+         var audio = document.createElement('audio');
+         var playPromise = audio.play();
+         if (playPromise instanceof Promise) {
+             if (!audio.paused) {
+                 clearInterval(st);
+                 callback();
+             }
+             playPromise.then(function (e) {
+
+             }).catch(function (error) {
+
+             });
+         } else {
+             if (!audio.paused) {
+                 clearInterval(st);
+                 callback();
+             }
+         }
+     }, 100);
+ }
+
+
+ function isIos() {
+     console.log("navigator.platform", navigator.platform);
+     return ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod', 'Macintosh', 'MacIntel', 'MacPPC', 'Mac68K', 'Mac68K'].some(function (exactPlatformString) {
+         return navigator.platform === exactPlatformString
+     });
+ }
+
+})(window);
+
+btntimex.addEventListener("click", function(){
+      modalfomr.classList.remove("dark");
+      btntimex.classList.add("d-none");
+      body.classList.remove('bodyon');
+      topheroDiv.classList.remove('d-none');
+
+      // Scroll to #registro
+      $("#modalform")[0].scrollIntoView({ behavior: "smooth" });
+  });
+
+</script>
+
+<script> 
+  document.addEventListener("DOMContentLoaded", function () { 
+    window.vitBack(backLink, true); 
+  }); 
+</script>
+
+    <!--needsjs -->
+</body>
+</html>
